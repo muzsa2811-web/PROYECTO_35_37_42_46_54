@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+     <script src="JS_CONT.js"></script>
+    <link rel="stylesheet" href="CSS_CONT.css">
+    <link rel="stylesheet" type="text/css" href="CSS/button.css">
+</head>
+ <nav class="menu">
+             <ul class="links">
+        <li><a href="INDEX_35_37_42_46_54.html">SERVICIOS</a></li>
+        <li><a href="registro.html">REGISTRO</a></li>
+
+          <li><a href="acerca_de.html">ACERCA DE</a></li>
+        <li><a href="contacto.html">NOSOTROS</a></li>
+     <li><a href="cal.html">CALCULOS</a></li>
+     <div><a href="cerrar_sesion.php" class="button">Cerrar Sesion</a></div>
+             </ul>
+        </nav>
+<body>
+     <form action="contacto.php"  method="post" onsubmit="return validafor()">
+    <h2>Formulario de Contacto</h2>
+
+    <label>Nombre:</label>
+    <input type="text" name="nombre" id="Nom" placeholder="Ingresa tu nombre">
+
+    <label>Género:</label>
+     <input type="radio" id="sexh" name="genero" value="Hombre"> Hombre
+     <input type="radio" id="sexm" name="genero" value="Mujer"> Mujer
+      <input type="radio" id="sexo" name="genero" value="Otro"> Otro
+
+      <label>Teléfono:</label>
+         <input type="text" id="tel" name="telefono" placeholder="10 dígitos">
+
+    <label>Correo electrónico:</label>
+       <input type="text" id="mail" name="correo" placeholder="ejemplo@correo.com">
+
+      <label>Edad:</label>
+       <input type="text" id="age" name="edad" placeholder="18-99">
+
+<label>Comentario:</label>
+<textarea id="coment" rows="3" name="comentario" placeholder="Escribe tu mensaje..."></textarea>
+
+    <button type="submit" name="enviar">Enviar</button>
+     <button ><a href="t_contacto.php">imprimir</a></button>
+  </form>
+</body>
+</html>

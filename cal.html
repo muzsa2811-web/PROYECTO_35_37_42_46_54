@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compra de Alimento 🐾</title>
+  <link rel="stylesheet" href="csscal.css" />
+   
+  <script src="jscal.js"></script>
+</head>
+
+ <nav class="menu">
+             <ul class="links">
+        <li><a href="INDEX_35_42_46.html">SERVICIOS</a></li>
+        <li><a href="registro.html">REGISTRO</a></li>
+        <li><a href="CONTACTOs.html">CONTACTO</a></li>
+          <li><a href="acerca_de.html">ACERCA DE</a></li>
+        <li><a href="contacto.html">NOSOTROS</a></li>
+             </ul>
+        </nav>
+<body>
+  <div class="form-container">
+    <h2>Compra de Alimento 🐾</h2>
+    <p>Completa los datos para calcular tu total</p>
+     <form id="compraForm" action="insertar_calculo.php" method="post">
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required />
+
+  <p>¿Eres cliente registrado?</p>
+  <label><input type="radio" name="cliente" value="si" required> Sí</label>
+  <label><input type="radio" name="cliente" value="no" required> No</label>
+
+  <label for="kilos">Cantidad (kg):</label>
+  <input type="number" name="kilos" id="kilos" min="1" required />
+
+  <p><strong>Precio por kilo:</strong> $45.00 MXN</p>
+
+  <label for="descuento">Descuento:</label>
+  <input type="text" id="descuento" name="descuento" readonly />
+
+  <label for="total">Total a pagar:</label>
+  <input type="text" id="total" name="total" readonly />
+
+  <button type="button" id="calcularBtn">Calcular total</button>
+
+  <input type="submit" name="ENVIAR" value="ENVIAR" class="boton-enviar">
+
+
+  <button class="boton" type="button" onclick="window.location.href='mostrarT_calculo.php'">
+      IMPRIMIR
+  </button>
+</form>
+  </div>
+
+</body>
+</html>
