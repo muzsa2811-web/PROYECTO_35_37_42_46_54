@@ -1,9 +1,13 @@
 <?php
+// Habilitar errores para debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Obtener credenciales de Railway
-$servidor = getenv('MYSQLHOST') ?: 'localhost';
+$servidor = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
 $usuario = getenv('MYSQLUSER') ?: 'root';
-$clave = getenv('MYSQL_ROOT_PASSWORD') ?: '';
-$base = getenv('MYSQLDATABASE') ?: 'proyecto_35_37_42_46_54';
+$clave = getenv('MYSQLPASSWORD') ?: 'AbSvHhhAvjjRlNSsmqWtBuiMcoYOYQxfQ';
+$base = getenv('MYSQLDATABASE') ?: 'railway';
 $puerto = getenv('MYSQLPORT') ?: 3306;
 
 // Crear conexión (agregamos el puerto)
@@ -17,6 +21,7 @@ if (!$enlace) {
 // Configurar charset UTF-8
 mysqli_set_charset($enlace, "utf8mb4");
 
-// ✅ Conexión exitosa
+// Conexión exitosa (comenta esta línea en producción)
+// echo "✅ Conexión exitosa a la base de datos!<br>";
 ?>
 
