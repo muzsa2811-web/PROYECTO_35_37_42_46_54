@@ -3,7 +3,7 @@
 $servidor = getenv('MYSQLHOST') ?: 'localhost';
 $usuario = getenv('MYSQLUSER') ?: 'root';
 $clave = getenv('MYSQL_ROOT_PASSWORD') ?: '';
-$base = getenv('MYSQLDATABASE') ?: 'railway';
+$base = getenv('MYSQLDATABASE') ?: 'proyecto_35_37_42_46_54';
 $puerto = getenv('MYSQLPORT') ?: 3306;
 
 // Crear conexión (agregamos el puerto)
@@ -19,3 +19,4 @@ mysqli_set_charset($enlace, "utf8mb4");
 
 // ✅ Conexión exitosa
 ?>
+
